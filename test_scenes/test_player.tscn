@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://irl7mh03cfhk"]
+
+[ext_resource type="Texture2D" uid="uid://dhi3iondk140r" path="res://Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_i2nvo"]
+[ext_resource type="PackedScene" uid="uid://cghit617ppl62" path="res://Player/player.tscn" id="2_ltxev"]
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="WarriorBlue" type="Sprite2D" parent="."]
+position = Vector2(1931, 842)
+texture = ExtResource("1_i2nvo")
+
+[node name="Player" parent="." instance=ExtResource("2_ltxev")]
+position = Vector2(351, 293)
+motion_mode = 1
