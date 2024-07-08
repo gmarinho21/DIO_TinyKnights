@@ -1,14 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://irl7mh03cfhk"]
+[gd_scene load_steps=5 format=3 uid="uid://irl7mh03cfhk"]
 
-[ext_resource type="Texture2D" uid="uid://dhi3iondk140r" path="res://Tiny Swords/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_i2nvo"]
+[ext_resource type="PackedScene" uid="uid://dsmdsft2c0qiu" path="res://systems/mob_spawner.tscn" id="1_plx4e"]
 [ext_resource type="PackedScene" uid="uid://cghit617ppl62" path="res://Player/player.tscn" id="2_ltxev"]
+[ext_resource type="PackedScene" uid="uid://c0w43ldn2lo2p" path="res://misc/meat.tscn" id="3_1db7c"]
+[ext_resource type="PackedScene" uid="uid://cyx84x416hnxa" path="res://ui/ui.tscn" id="3_vt54w"]
 
 [node name="TestPlayer" type="Node2D"]
 
-[node name="WarriorBlue" type="Sprite2D" parent="."]
-position = Vector2(1931, 842)
-texture = ExtResource("1_i2nvo")
+[node name="MobSpawner" parent="." instance=ExtResource("1_plx4e")]
+position = Vector2(593, 369)
 
 [node name="Player" parent="." instance=ExtResource("2_ltxev")]
-position = Vector2(351, 293)
-motion_mode = 1
+position = Vector2(560, 298)
+
+[node name="GameUI" parent="." instance=ExtResource("3_vt54w")]
+
+[node name="Meat" parent="." instance=ExtResource("3_1db7c")]
+position = Vector2(240, 497)
+
+[node name="Meat2" parent="." instance=ExtResource("3_1db7c")]
+position = Vector2(885, 512)
