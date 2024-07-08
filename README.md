@@ -3,7 +3,7 @@
 Este é um projeto desenvolvido para o Bootcamp Santander Godot. é possível joga-lo em:
 https://jaka21.itch.io/the-dio-tiny-knight
 
-Comandos
+### Comandos
 
 W - Movimentar para Cima
 A - Movimentar para Esquerda
