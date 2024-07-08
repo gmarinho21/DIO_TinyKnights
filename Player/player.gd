@@ -160,6 +160,7 @@ func damage(amount: int) -> void:
 		die()
 
 func die() -> void:
+	GameManager.end_game()
 	if death_prefab:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position
@@ -170,7 +171,6 @@ func heal(amount: int) -> int:
 	health += amount
 	if health > max_health:
 		health = max_health	
-	print("A vida do Player é de ", health)
 	return health
 
 func update_ritual(delta: float) -> void:

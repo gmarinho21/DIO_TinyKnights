@@ -5,9 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://8wy5ej0gp8tc" path="res://misc/ritual.tscn" id="2_6kshm"]
 [ext_resource type="PackedScene" uid="uid://bqm28ncmk1hml" path="res://misc/big_skull.tscn" id="2_ho86h"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nxwqw"]
-radius = 18.0
-height = 60.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_iqqpw"]
+radius = 16.0
 
 [sub_resource type="Animation" id="Animation_03mq1"]
 length = 0.001
@@ -195,6 +194,7 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(1, 0.0117647, 0, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+position = Vector2(0, -8)
 script = ExtResource("1_gjsmr")
 ritual_damage = 2
 ritual_interval = 5.0
@@ -209,8 +209,8 @@ hframes = 6
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -27)
-shape = SubResource("CapsuleShape2D_nxwqw")
+position = Vector2(1, -4)
+shape = SubResource("CircleShape2D_iqqpw")
 debug_color = Color(0, 0.6, 0.701961, 0.258824)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -220,6 +220,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="SwordArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
 position = Vector2(2, -25)
@@ -227,6 +228,7 @@ shape = SubResource("CircleShape2D_rjrgh")
 debug_color = Color(0.952941, 0.196078, 0.247059, 0.188235)
 
 [node name="HitboxArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxArea"]
 position = Vector2(6, -24)
@@ -244,3 +246,4 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_kqqql")
 value = 50.0
 rounded = true
 show_percentage = false
+metadata/_edit_use_anchors_ = true
